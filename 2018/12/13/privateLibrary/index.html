@@ -108,28 +108,35 @@
 
 
 
-  <meta name="description" content="CAShapeLayerCAShapeLayer继承自CALayer，根据贝塞尔曲线的路径，可以绘制出各种形状的图形。简单的说,UIBezierPath制定出绘制的路径，然后CAShapeLayer根据指定的路径绘制出相应的形状。 代码画贝塞尔曲线最主要的就是startAngle与endAngle两个属性，根据下图标注可以按照需要来选择角度。 要做出进度条的样式，首先画两个圆，一个作为底部灰色的">
+  <meta name="description" content="###一、本地化私有库工程创建好之后可以用作本地私有库，通过path来引入本地私有库这样做的好处是引入灵活，本地修改了东西只需要pod install就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。 ###二、远程私有库创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用UIBezierPath画圆形进度条">
-<meta property="og:url" content="http://yoursite.com/2018/06/28/circleView/index.html">
+<meta property="og:title" content="privateLibrary">
+<meta property="og:url" content="http://yoursite.com/2018/12/13/privateLibrary/index.html">
 <meta property="og:site_name" content="Sun-Blog">
-<meta property="og:description" content="CAShapeLayerCAShapeLayer继承自CALayer，根据贝塞尔曲线的路径，可以绘制出各种形状的图形。简单的说,UIBezierPath制定出绘制的路径，然后CAShapeLayer根据指定的路径绘制出相应的形状。 代码画贝塞尔曲线最主要的就是startAngle与endAngle两个属性，根据下图标注可以按照需要来选择角度。 要做出进度条的样式，首先画两个圆，一个作为底部灰色的">
+<meta property="og:description" content="###一、本地化私有库工程创建好之后可以用作本地私有库，通过path来引入本地私有库这样做的好处是引入灵活，本地修改了东西只需要pod install就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。 ###二、远程私有库创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-947dfe29c0731f36.gif?imageMogr2/auto-orient/strip">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-55858d78ee5aee9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-7ac4392c5731e6f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-12-06T08:34:45.726Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-75d8124d983700d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-60e6bd19f9b131a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-37bd47a6516e8fa5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-b6b991b04e735594.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-ece7e8f4dba87a78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-f46201fb769cd4cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-fae394dd3c3520b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-e7021a95642d47d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-ecd68721fb9c0db2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-6e50007bbf5cc9cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-12-13T02:17:14.641Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用UIBezierPath画圆形进度条">
-<meta name="twitter:description" content="CAShapeLayerCAShapeLayer继承自CALayer，根据贝塞尔曲线的路径，可以绘制出各种形状的图形。简单的说,UIBezierPath制定出绘制的路径，然后CAShapeLayer根据指定的路径绘制出相应的形状。 代码画贝塞尔曲线最主要的就是startAngle与endAngle两个属性，根据下图标注可以按照需要来选择角度。 要做出进度条的样式，首先画两个圆，一个作为底部灰色的">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1756168-947dfe29c0731f36.gif?imageMogr2/auto-orient/strip">
+<meta name="twitter:title" content="privateLibrary">
+<meta name="twitter:description" content="###一、本地化私有库工程创建好之后可以用作本地私有库，通过path来引入本地私有库这样做的好处是引入灵活，本地修改了东西只需要pod install就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。 ###二、远程私有库创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1756168-75d8124d983700d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/28/circleView/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/13/privateLibrary/">
 
 
 
@@ -139,7 +146,7 @@
   };
 </script>
 
-  <title>使用UIBezierPath画圆形进度条 | Sun-Blog</title>
+  <title>privateLibrary | Sun-Blog</title>
   
 
 
@@ -304,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/28/circleView/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/13/privateLibrary/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bin Sun">
@@ -321,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用UIBezierPath画圆形进度条
+          <h1 class="post-title" itemprop="name headline">privateLibrary
               
             
           </h1>
@@ -346,24 +353,12 @@
                 
               
 
-              <time title="创建时间：2018-06-28 14:57:04" itemprop="dateCreated datePublished" datetime="2018-06-28T14:57:04+08:00">2018-06-28</time>
+              <time title="创建时间：2018-12-13 10:16:36 / 修改时间：10:17:14" itemprop="dateCreated datePublished" datetime="2018-12-13T10:16:36+08:00">2018-12-13</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-12-06 16:34:45" itemprop="dateModified" datetime="2018-12-06T16:34:45+08:00">2018-12-06</time>
               
             
           </span>
@@ -403,13 +398,16 @@
       
 
       
-        <p><img src="https://upload-images.jianshu.io/upload_images/1756168-947dfe29c0731f36.gif?imageMogr2/auto-orient/strip" alt="最终效果图"></p>
-<h2 id="CAShapeLayer"><a href="#CAShapeLayer" class="headerlink" title="CAShapeLayer"></a>CAShapeLayer</h2><p><code>CAShapeLayer</code>继承自<code>CALayer</code>，根据贝塞尔曲线的路径，可以绘制出各种形状的图形。简单的说,<code>UIBezierPath</code>制定出绘制的路径，然后<code>CAShapeLayer</code>根据指定的路径绘制出相应的形状。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>画贝塞尔曲线最主要的就是<code>startAngle</code>与<code>endAngle</code>两个属性，根据下图标注可以按照需要来选择角度。<br><img src="https://upload-images.jianshu.io/upload_images/1756168-55858d78ee5aee9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>要做出进度条的样式，首先画两个圆，一个作为底部灰色的，另一个是前面进度条圆弧：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">CAShapeLayer *frontCircle = [CAShapeLayer layer];  // 进度条圆弧</span><br><span class="line">CAShapeLayer *backCircle = [CAShapeLayer layer]; //进度条底</span><br><span class="line">[self.circleView.layer addSublayer:backCircle];</span><br><span class="line">[self.circleView.layer addSublayer:frontCircle];</span><br><span class="line"></span><br><span class="line">// 画底</span><br><span class="line">UIBezierPath *backPath = [UIBezierPath bezierPathWithArcCenter:self.circleView.center radius:100 startAngle:0 endAngle:M_PI*2 clockwise:YES];</span><br><span class="line">backCircle.lineWidth = 12;  // 线条宽度</span><br><span class="line">backCircle.strokeColor = [[UIColor grayColor] CGColor]; // 边缘线的颜色</span><br><span class="line">backCircle.fillColor = [[UIColor clearColor] CGColor];  // 闭环填充的颜色</span><br><span class="line">backCircle.lineCap = @&quot;round&quot;;  // 边缘线的类型</span><br><span class="line">backCircle.path = backPath.CGPath; // 从贝塞尔曲线获取到形状</span><br><span class="line"></span><br><span class="line">// 画刻度</span><br><span class="line">UIBezierPath *frontPath = [UIBezierPath bezierPathWithArcCenter:self.circleView.center radius:100 startAngle:M_PI endAngle:M_PI*2 clockwise:YES];</span><br><span class="line">frontCircle.lineWidth = 12;</span><br><span class="line">frontCircle.strokeColor = [[UIColor blueColor] CGColor];</span><br><span class="line">frontCircle.fillColor = [[UIColor clearColor] CGColor];</span><br><span class="line">frontCircle.lineCap = @&quot;round&quot;;</span><br><span class="line">frontCircle.path = frontPath.CGPath;</span><br></pre></td></tr></table></figure></p>
-<p>这样一个简单的进度条就出来了<br><img src="https://upload-images.jianshu.io/upload_images/1756168-7ac4392c5731e6f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>接下来添加动画效果，使用<code>CABasicAnimation</code>根据<code>CAShapeLayer</code>来显示动画:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 动画</span><br><span class="line">CABasicAnimation *animation = [CABasicAnimation animation];</span><br><span class="line">animation.keyPath = @&quot;strokeEnd&quot;;</span><br><span class="line">animation.duration = 1; // 动画时长</span><br><span class="line">animation.fromValue = @0; // 开始值</span><br><span class="line">frontCircle.strokeEnd = 1;</span><br><span class="line">// 给layer添加动画</span><br><span class="line">[frontCircle addAnimation:animation forKey:nil];</span><br></pre></td></tr></table></figure></p>
-<p>最后一步是添加小圆点，小圆点就是一个白色的view并通过动画来改变小圆点的位置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 小圆点</span><br><span class="line">UIView *roundView = [[UIView alloc] init];</span><br><span class="line">roundView.frame = CGRectMake(50, 50, 8, 8);</span><br><span class="line">roundView.layer.masksToBounds = YES;</span><br><span class="line">roundView.layer.cornerRadius = 4;</span><br><span class="line">roundView.backgroundColor = [UIColor whiteColor];</span><br><span class="line">[self.circleView addSubview:roundView];</span><br><span class="line"></span><br><span class="line">// 小圆点动画</span><br><span class="line">CAKeyframeAnimation *animation1 = [CAKeyframeAnimation animationWithKeyPath:@&quot;position&quot;];</span><br><span class="line">animation1.duration = 1;</span><br><span class="line">// 小圆点的路径与进度条弧度一样</span><br><span class="line">animation1.path = frontPath.CGPath;</span><br><span class="line">animation1.fillMode = kCAFillModeForwards;</span><br><span class="line">animation1.removedOnCompletion = NO;</span><br><span class="line">[roundView.layer addAnimation:animation1 forKey: nil];</span><br></pre></td></tr></table></figure></p>
-<p>这样一个简单的圆形进度条就完成了，这里也有demo可以下载:(<a href="https://github.com/sunbin117/circleView" target="_blank" rel="noopener">https://github.com/sunbin117/circleView</a>)</p>
+        <p>###一、本地化私有库<br>工程创建好之后可以用作本地私有库，通过path来引入本地私有库<br><img src="https://upload-images.jianshu.io/upload_images/1756168-75d8124d983700d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="引入私有库"><br>这样做的好处是引入灵活，本地修改了东西只需要<code>pod install</code>就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。</p>
+<p>###二、远程私有库<br>创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创建私有库收费，我在码云上创建的仓库。<br>1.创建远程索引库<br><img src="https://upload-images.jianshu.io/upload_images/1756168-60e6bd19f9b131a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="远程索引库"><br>2.本地添加远程索引库<code>pod repo add TestLib https://gitee.com/sunbin1992/TestSpecs.git</code>，添加成功后终端执行命令<code>open ~/.cocoapods/repos/</code>，打开文件夹后会发现repo已经添加成功。<br><img src="https://upload-images.jianshu.io/upload_images/1756168-37bd47a6516e8fa5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="repo添加成功"><br>3.创建远程仓库来存放代码<br><img src="https://upload-images.jianshu.io/upload_images/1756168-b6b991b04e735594.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码存放仓库"><br>4.将之前创建好的工程通过git提交到远程仓库</p>
+<ul>
+<li>git add .</li>
+<li>git commit -m “xxx”</li>
+<li>git remote add origin <a href="https://gitee.com/sunbin1992/TestLib.git" target="_blank" rel="noopener">https://gitee.com/sunbin1992/TestLib.git</a></li>
+<li>git push origin master<br>成功后查看远程仓库，代码已经上传。<br><img src="https://upload-images.jianshu.io/upload_images/1756168-ece7e8f4dba87a78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码已经上传"><br>5.打标签，主工程通过标签来引入不同打版本，每次私有库升级都要通过tag来实现这样比较方便引入，通过git来执行命令</li>
+<li>git tag ‘0.1.2’(需要与podspec文件版本一致)</li>
+<li>git push –tags<br>6.提交spec到本地索引库，会自动提交到远程索引库。<code>pod repo push TestLib testLib.podspec</code>，此时会自动执行远程验证podspec，也可以通过<code>pod spec lint</code>来先进行验证。验证成功并添加成功会显示如下：<br><img src="https://upload-images.jianshu.io/upload_images/1756168-f46201fb769cd4cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="验证成功"><br>此时看一下本地repo，已经添加成功了<br><img src="https://upload-images.jianshu.io/upload_images/1756168-fae394dd3c3520b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="本地repo"><br>7.pod搜索一下<code>pod search testLib</code><br><img src="https://upload-images.jianshu.io/upload_images/1756168-e7021a95642d47d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="搜索pod"><br>8.工程引入,需要注意的是主工程pod文件需要添加索引，有多少私有库就通过source添加多少索引：<br><img src="https://upload-images.jianshu.io/upload_images/1756168-ecd68721fb9c0db2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="添加索引"><br>主工程pod文件引入<code>pod &#39;testLib&#39;</code><br><img src="https://upload-images.jianshu.io/upload_images/1756168-6e50007bbf5cc9cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="引入成功"></li>
+</ul>
 
       
     </div>
@@ -448,8 +446,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/12/qrCode/" rel="next" title="Swift扫描二维码">
-                <i class="fa fa-chevron-left"></i> Swift扫描二维码
+              <a href="/2018/12/03/creatFile/" rel="next" title="iOS组件化工程搭建流程">
+                <i class="fa fa-chevron-left"></i> iOS组件化工程搭建流程
               </a>
             
           </div>
@@ -457,10 +455,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/03/creatFile/" rel="prev" title="iOS组件化工程搭建流程">
-                iOS组件化工程搭建流程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -505,17 +499,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -587,22 +572,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CAShapeLayer"><span class="nav-number">1.</span> <span class="nav-text">CAShapeLayer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
