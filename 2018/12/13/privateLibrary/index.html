@@ -108,12 +108,12 @@
 
 
 
-  <meta name="description" content="###一、本地化私有库工程创建好之后可以用作本地私有库，通过path来引入本地私有库这样做的好处是引入灵活，本地修改了东西只需要pod install就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。 ###二、远程私有库创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创">
+  <meta name="description" content="本地化私有库工程创建好之后可以用作本地私有库，通过path来引入本地私有库这样做的好处是引入灵活，本地修改了东西只需要pod install就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。 远程私有库创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创建私有库收费，我在码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS组件化开发远程私有库">
 <meta property="og:url" content="http://yoursite.com/2018/12/13/privateLibrary/index.html">
 <meta property="og:site_name" content="Sun-Blog">
-<meta property="og:description" content="###一、本地化私有库工程创建好之后可以用作本地私有库，通过path来引入本地私有库这样做的好处是引入灵活，本地修改了东西只需要pod install就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。 ###二、远程私有库创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创">
+<meta property="og:description" content="本地化私有库工程创建好之后可以用作本地私有库，通过path来引入本地私有库这样做的好处是引入灵活，本地修改了东西只需要pod install就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。 远程私有库创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创建私有库收费，我在码">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-75d8124d983700d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-60e6bd19f9b131a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -125,10 +125,10 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-e7021a95642d47d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-ecd68721fb9c0db2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1756168-6e50007bbf5cc9cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-12-13T02:19:20.931Z">
+<meta property="og:updated_time" content="2018-12-13T02:22:04.990Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS组件化开发远程私有库">
-<meta name="twitter:description" content="###一、本地化私有库工程创建好之后可以用作本地私有库，通过path来引入本地私有库这样做的好处是引入灵活，本地修改了东西只需要pod install就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。 ###二、远程私有库创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创">
+<meta name="twitter:description" content="本地化私有库工程创建好之后可以用作本地私有库，通过path来引入本地私有库这样做的好处是引入灵活，本地修改了东西只需要pod install就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。 远程私有库创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创建私有库收费，我在码">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1756168-75d8124d983700d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -353,7 +353,7 @@
                 
               
 
-              <time title="创建时间：2018-12-13 10:16:36 / 修改时间：10:19:20" itemprop="dateCreated datePublished" datetime="2018-12-13T10:16:36+08:00">2018-12-13</time>
+              <time title="创建时间：2018-12-13 10:16:36 / 修改时间：10:22:04" itemprop="dateCreated datePublished" datetime="2018-12-13T10:16:36+08:00">2018-12-13</time>
             
 
             
@@ -398,8 +398,8 @@
       
 
       
-        <p>###一、本地化私有库<br>工程创建好之后可以用作本地私有库，通过path来引入本地私有库<br><img src="https://upload-images.jianshu.io/upload_images/1756168-75d8124d983700d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="引入私有库"><br>这样做的好处是引入灵活，本地修改了东西只需要<code>pod install</code>就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。</p>
-<p>###二、远程私有库<br>创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创建私有库收费，我在码云上创建的仓库。<br>1.创建远程索引库<br><img src="https://upload-images.jianshu.io/upload_images/1756168-60e6bd19f9b131a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="远程索引库"><br>2.本地添加远程索引库<code>pod repo add TestLib https://gitee.com/sunbin1992/TestSpecs.git</code>，添加成功后终端执行命令<code>open ~/.cocoapods/repos/</code>，打开文件夹后会发现repo已经添加成功。<br><img src="https://upload-images.jianshu.io/upload_images/1756168-37bd47a6516e8fa5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="repo添加成功"><br>3.创建远程仓库来存放代码<br><img src="https://upload-images.jianshu.io/upload_images/1756168-b6b991b04e735594.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码存放仓库"><br>4.将之前创建好的工程通过git提交到远程仓库</p>
+        <h2 id="本地化私有库"><a href="#本地化私有库" class="headerlink" title="本地化私有库"></a>本地化私有库</h2><p>工程创建好之后可以用作本地私有库，通过path来引入本地私有库<br><img src="https://upload-images.jianshu.io/upload_images/1756168-75d8124d983700d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="引入私有库"><br>这样做的好处是引入灵活，本地修改了东西只需要<code>pod install</code>就可以，当然缺点就是只能本人使用，多人开发无法使用。没有tag版本升级无法维护。所以我们需要一个稳定的版本上传到远端作为远程私有库来使用。</p>
+<h2 id="远程私有库"><a href="#远程私有库" class="headerlink" title="远程私有库"></a>远程私有库</h2><p>创建远程私有库，首先需要两个远程仓库，一个存放索引，一个存放私有库代码。由于github创建私有库收费，我在码云上创建的仓库。<br>1.创建远程索引库<br><img src="https://upload-images.jianshu.io/upload_images/1756168-60e6bd19f9b131a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="远程索引库"><br>2.本地添加远程索引库<code>pod repo add TestLib https://gitee.com/sunbin1992/TestSpecs.git</code>，添加成功后终端执行命令<code>open ~/.cocoapods/repos/</code>，打开文件夹后会发现repo已经添加成功。<br><img src="https://upload-images.jianshu.io/upload_images/1756168-37bd47a6516e8fa5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="repo添加成功"><br>3.创建远程仓库来存放代码<br><img src="https://upload-images.jianshu.io/upload_images/1756168-b6b991b04e735594.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码存放仓库"><br>4.将之前创建好的工程通过git提交到远程仓库</p>
 <ul>
 <li>git add .</li>
 <li>git commit -m “xxx”</li>
@@ -499,8 +499,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -572,6 +581,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地化私有库"><span class="nav-number">1.</span> <span class="nav-text">本地化私有库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程私有库"><span class="nav-number">2.</span> <span class="nav-text">远程私有库</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
